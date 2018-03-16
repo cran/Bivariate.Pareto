@@ -9,7 +9,7 @@
 #' @return \item{tau}{Kendall's tau.}
 #'
 #' @references Sankaran and Nair (1993), A bivariate Pareto model and its applications to reliability, Naval Research Logistics, 40(7): 1013-1020.
-#' @references Shih et al. (2018), Fitting competing risks data to bivariate Pareto models, Communications in Statistics - Theory and Methods, to appear.
+#' @references Shih et al. (2018), Fitting competing risks data to bivariate Pareto models, Communications in Statistics - Theory and Methods, doi: 10.1080/03610926.2018.1425450.
 #' @importFrom stats integrate
 #' @export
 #'
@@ -27,9 +27,9 @@ Kendall.SNBP = function(Alpha0,Alpha1,Alpha2,Gamma) {
 
   douint = function(f,u.lower,u.upper,v.lower,v.upper) {
 
-    f1 = function(u) integrate(f,lower = u.lower,upper = u.upper,u = u,rel.tol = 1e-9)$value
+    f1 = function(u) integrate(f,lower = v.lower,upper = v.upper,u = u,rel.tol = 1e-9)$value
     f2 = function(u) sapply(u,f1)
-    return(integrate(f2,v.lower,v.upper,rel.tol = 1e-9)$value)
+    return(integrate(f2,u.lower,u.upper,rel.tol = 1e-9)$value)
 
   }
 

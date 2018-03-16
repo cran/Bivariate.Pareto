@@ -5,7 +5,7 @@
 \packageTitle{Bivariate.Pareto}
 }
 \description{
-\packageDescription{Bivariate.Pareto}
+Perform competing risks analysis under bivariate Pareto models. See Shih et al. (2018) for details.
 }
 %\details{
 
@@ -16,6 +16,6 @@
 Maintainer: \packageMaintainer{Bivariate.Pareto}
 }
 \references{
-Shih et al. (2018), Fitting competing risks data to bivariate Pareto models, Communications in Statistics - Theory and Methods, to appear.
+Shih et al. (2018), Fitting competing risks data to bivariate Pareto models, Communications in Statistics - Theory and Methods, doi: 10.1080/03610926.2018.1425450.
 }
 

@@ -137,5 +137,5 @@ set.seed(10)
 MLE.Frank.Pareto.com(t.event,event1,event2,bootstrap = FALSE)
 }
 \references{
-Shih et al. (2018), Fitting competing risks data to bivariate Pareto models, Communications in Statistics - Theory and Methods, to appear.
+Shih et al. (2018), Fitting competing risks data to bivariate Pareto models, Communications in Statistics - Theory and Methods, doi: 10.1080/03610926.2018.1425450.
 }

@@ -31,5 +31,5 @@ Kendall.SNBP(7e-5,0.0036,0.0075,1.8277)
 \references{
 Sankaran and Nair (1993), A bivariate Pareto model and its applications to reliability, Naval Research Logistics, 40(7): 1013-1020.
 
-Shih et al. (2018), Fitting competing risks data to bivariate Pareto models, Communications in Statistics - Theory and Methods, to appear.
+Shih et al. (2018), Fitting competing risks data to bivariate Pareto models, Communications in Statistics - Theory and Methods, doi: 10.1080/03610926.2018.1425450.
 }
