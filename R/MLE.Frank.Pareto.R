@@ -31,7 +31,7 @@
 #' \item{AIC}{AIC value under the fitted model.}
 #' \item{BIC}{BIC value under the fitted model.}
 #'
-#' @references Shih et al. (2018), Fitting competing risks data to bivariate Pareto models, Communications in Statistics - Theory and Methods, doi: 10.1080/03610926.2018.1425450.
+#' @references Shih J-H, Lee W, Sun L-H, Emura T (2018), Fitting competing risks data to bivariate Pareto models, Communications in Statistics - Theory and Methods, doi: 10.1080/03610926.2018.1425450.
 #' @importFrom stats qnorm runif
 #' @importFrom utils globalVariables
 #' @export

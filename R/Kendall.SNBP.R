@@ -8,8 +8,8 @@
 #' @details The admissible range of \code{Alpha0} (\eqn{\alpha_{0}}) is \eqn{0 \leq \alpha_{0} \leq (\gamma+1) \alpha_{1} \alpha_{2}.}
 #' @return \item{tau}{Kendall's tau.}
 #'
-#' @references Sankaran and Nair (1993), A bivariate Pareto model and its applications to reliability, Naval Research Logistics, 40(7): 1013-1020.
-#' @references Shih et al. (2018), Fitting competing risks data to bivariate Pareto models, Communications in Statistics - Theory and Methods, doi: 10.1080/03610926.2018.1425450.
+#' @references Sankaran PG, Nair NU (1993), A bivariate Pareto model and its applications to reliability, Naval Research Logistics, 40(7): 1013-1020.
+#' @references Shih J-H, Lee W, Sun L-H, Emura T (2018), Fitting competing risks data to bivariate Pareto models, Communications in Statistics - Theory and Methods, doi: 10.1080/03610926.2018.1425450.
 #' @importFrom stats integrate
 #' @export
 #'
