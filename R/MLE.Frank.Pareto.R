@@ -34,6 +34,7 @@
 #' @references Shih J-H, Lee W, Sun L-H, Emura T (2018), Fitting competing risks data to bivariate Pareto models, Communications in Statistics - Theory and Methods, doi: 10.1080/03610926.2018.1425450.
 #' @importFrom stats qnorm runif
 #' @importFrom utils globalVariables
+#' @importFrom methods is
 #' @export
 #'
 #' @examples
@@ -118,7 +119,6 @@
 #' library(Bivariate.Pareto)
 #' set.seed(10)
 #' MLE.Frank.Pareto(t.event,event1,event2,Theta = -5)
-
 
 MLE.Frank.Pareto = function(t.event,event1,event2,Theta,Alpha1.0 = 1,Alpha2.0 = 1,
                             Gamma1.0 = 1,Gamma2.0 = 1,epsilon = 1e-5,d = exp(10),
@@ -492,7 +492,7 @@ MLE.Frank.Pareto = function(t.event,event1,event2,Theta,Alpha1.0 = 1,Alpha2.0 = 
   repeat{
 
     temp = try(solve(HL_function(par_old),silent = TRUE))
-    if (class(temp) == "try-error"){
+    if (is(temp,"try-error")){
 
       random = random+1
       count = 0

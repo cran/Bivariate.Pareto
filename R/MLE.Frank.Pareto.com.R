@@ -28,9 +28,10 @@
 #' \item{AIC}{AIC value under the fitted model.}
 #' \item{BIC}{BIC value under the fitted model.}
 #'
-#' @references Shih J-H, Lee W, Sun L-H, Emura T (2018), Fitting competing risks data to bivariate Pareto models, Communications in Statistics - Theory and Methods, doi: 10.1080/03610926.2018.1425450.
+#' @references Shih J-H, Lee W, Sun L-H, Emura T (2019), Fitting competing risks data to bivariate Pareto models, Communications in Statistics - Theory and Methods, 48:1193-1220.
 #' @importFrom stats qnorm runif sd
 #' @importFrom utils globalVariables
+#' @importFrom methods is
 #' @export
 #'
 #' @examples
@@ -400,7 +401,7 @@ MLE.Frank.Pareto.com = function(t.event,event1,event2,Theta.0 = 1,Alpha.0 = 1,Ga
   repeat{
 
     temp1 = try(solve(HL_function(par_old)),silent = TRUE)
-    if (class(temp1) == "try-error") {
+    if (is(temp1,"try-error")) {
 
       random = random+1
       count = 0
@@ -430,8 +431,8 @@ MLE.Frank.Pareto.com = function(t.event,event1,event2,Theta.0 = 1,Alpha.0 = 1,Ga
 
       temp2 = try(solve(HL_function(par_new)),silent = TRUE)
       temp3 = try(solve(H_function(c(par_new[1],exp(par_new[2]),exp(par_new[3])))),silent = TRUE)
-      if (class(temp2) == "try-error" |
-          class(temp3) == "try-error" |
+      if (is(temp2,"try-error") |
+          is(temp3,"try-error") |
           det(HL_function(par_new)) > 0) {
 
         random = random+1
@@ -502,7 +503,7 @@ MLE.Frank.Pareto.com = function(t.event,event1,event2,Theta.0 = 1,Alpha.0 = 1,Ga
       repeat{
 
         temp1 = try(solve(HL_function(par_old_B)),silent = TRUE)
-        if (class(temp1) == "try-error") {
+        if (is(temp1,"try-error")) {
 
           random = random+1
           count = 0
@@ -532,8 +533,8 @@ MLE.Frank.Pareto.com = function(t.event,event1,event2,Theta.0 = 1,Alpha.0 = 1,Ga
 
           temp2 = try(solve(HL_function(par_new_B)),silent = TRUE)
           temp3 = try(solve(H_function(c(par_new_B[1],exp(par_new_B[2]),exp(par_new_B[3])))),silent = TRUE)
-          if (class(temp2) == "try-error" |
-              class(temp3) == "try-error" |
+          if (is(temp2,"try-error") |
+              is(temp3,"try-error") |
               det(HL_function(par_new_B)) > 0) {
 
             random = random+1

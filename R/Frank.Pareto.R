@@ -10,7 +10,7 @@
 #' @return \item{X}{\code{X} is asscoiated with the parameters \code{Alpha1} and \code{Gamma1}.}
 #' \item{Y}{\code{Y} is asscoiated with the parameters \code{Alpha2} and \code{Gamma2}.}
 #'
-#' @references Shih J-H, Lee W, Sun L-H, Emura T (2018), Fitting competing risks data to bivariate Pareto models, Communications in Statistics - Theory and Methods, doi: 10.1080/03610926.2018.1425450.
+#' @references Shih J-H, Lee W, Sun L-H, Emura T (2019), Fitting competing risks data to bivariate Pareto models, Communications in Statistics - Theory and Methods, 48:1193-1220.
 #' @importFrom stats runif
 #' @export
 #'

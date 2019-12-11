@@ -4,9 +4,20 @@
 \alias{MLE.Frank.Pareto.com}
 \title{Maximum likelihood estimation for bivariate dependent competing risks data under the Frank copula with the common Pareto margins}
 \usage{
-MLE.Frank.Pareto.com(t.event, event1, event2, Theta.0 = 1, Alpha.0 = 1,
-  Gamma.0 = 1, epsilon = 1e-05, r.1 = 13, r.2 = 3, r.3 = 3,
-  bootstrap = FALSE, B = 200)
+MLE.Frank.Pareto.com(
+  t.event,
+  event1,
+  event2,
+  Theta.0 = 1,
+  Alpha.0 = 1,
+  Gamma.0 = 1,
+  epsilon = 1e-05,
+  r.1 = 13,
+  r.2 = 3,
+  r.3 = 3,
+  bootstrap = FALSE,
+  B = 200
+)
 }
 \arguments{
 \item{t.event}{Vector of the observed failure times.}
@@ -137,5 +148,5 @@ set.seed(10)
 MLE.Frank.Pareto.com(t.event,event1,event2,bootstrap = FALSE)
 }
 \references{
-Shih J-H, Lee W, Sun L-H, Emura T (2018), Fitting competing risks data to bivariate Pareto models, Communications in Statistics - Theory and Methods, doi: 10.1080/03610926.2018.1425450.
+Shih J-H, Lee W, Sun L-H, Emura T (2019), Fitting competing risks data to bivariate Pareto models, Communications in Statistics - Theory and Methods, 48:1193-1220.
 }

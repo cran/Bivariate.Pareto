@@ -12,7 +12,7 @@
 #' \item{Y}{\code{Y} is asscoiated with the parameters \code{Alpha2} and \code{Gamma}.}
 #'
 #' @references Sankaran PG, Nair NU (1993), A bivariate Pareto model and its applications to reliability, Naval Research Logistics, 40(7): 1013-1020.
-#' @references Shih J-H, Lee W, Sun L-H, Emura T (2018), Fitting competing risks data to bivariate Pareto models, Communications in Statistics - Theory and Methods, doi: 10.1080/03610926.2018.1425450.
+#' @references Shih J-H, Lee W, Sun L-H, Emura T (2019), Fitting competing risks data to bivariate Pareto models, Communications in Statistics - Theory and Methods, 48:1193-1220.
 #' @importFrom stats runif uniroot
 #' @export
 #'

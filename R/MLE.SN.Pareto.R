@@ -15,7 +15,7 @@
 #' @description Maximum likelihood estimation for bivariate dependent competing risks data under the SNBP distribution (Sankaran and Nair, 1993).
 #' @details The admissible range of \code{Alpha0} (\eqn{\alpha_{0}}) is \eqn{0 \leq \alpha_{0} \leq (\gamma+1) \alpha_{1} \alpha_{2}.}
 #'
-#' To adapt our functions to dependent censoring models in Emura and Chen (2018), one can simply set \code{event2} = \code{1-event1} (See examples).
+#' To adapt our functions to dependent censoring models in Emura and Chen (2018), one can simply set \code{event2} = \code{1-event1}.
 #'
 #' @return \item{n}{Sample size.}
 #' \item{count}{Iteration number.}
@@ -32,10 +32,11 @@
 #' \item{BIC}{BIC value under the fitted model.}
 #'
 #' @references Sankaran PG, Nair NU (1993), A bivariate Pareto model and its applications to reliability, Naval Research Logistics, 40(7): 1013-1020.
-#' @references Shih J-H, Lee W, Sun L-H, Emura T (2018), Fitting competing risks data to bivariate Pareto models, Communications in Statistics - Theory and Methods, doi: 10.1080/03610926.2018.1425450.
-#' @references Emura T, Chen Y-H (2018) Analysis of Survival Data with Dependent Censoring, Copula-Based Approaches, JSS Research Series in Statistics, Springer, in press.
+#' @references Emura T, Chen Y-H (2018) Analysis of Survival Data with Dependent Censoring, Copula-Based Approaches, JSS Research Series in Statistics, Springer, Singapore.
+#' @references Shih J-H, Lee W, Sun L-H, Emura T (2019), Fitting competing risks data to bivariate Pareto models, Communications in Statistics - Theory and Methods, 48:1193-1220.
 #' @importFrom stats qnorm runif
 #' @importFrom utils globalVariables
+#' @importFrom methods is
 #' @import compound.Cox
 #' @export
 #'
@@ -121,16 +122,6 @@
 #' library(Bivariate.Pareto)
 #' set.seed(10)
 #' MLE.SN.Pareto(t.event,event1,event2,Alpha0 = 7e-5)
-#'
-#' ### dependent censoring ###
-#'
-#' library(compound.Cox)
-#' library(Bivariate.Pareto)
-#' data(Lung)
-#' t.vec = Lung$t.vec
-#' d.vec = Lung$d.vec
-#'
-#' MLE.SN.Pareto(t.vec,d.vec,1-d.vec,Alpha0 = 1e-5,d = exp(15))
 
 MLE.SN.Pareto = function(t.event,event1,event2,Alpha0,Alpha1.0 = 1,Alpha2.0 = 1,Gamma.0 = 1,
                          epsilon = 1e-5,d = exp(10),r.1 = 6,r.2 = 6,r.3 = 6) {
@@ -253,7 +244,7 @@ MLE.SN.Pareto = function(t.event,event1,event2,Alpha0,Alpha1.0 = 1,Alpha2.0 = 1,
   repeat{
 
     temp = try(solve(HL_function(par_old),silent = TRUE))
-    if (class(temp) == "try-error"){
+    if (is(temp,"try-error")) {
 
       random = random+1
       count = 0

@@ -4,9 +4,22 @@
 \alias{MLE.Frank.Pareto}
 \title{Maximum likelihood estimation for bivariate dependent competing risks data under the Frank copula with the Pareto margins and fixed \eqn{\theta}}
 \usage{
-MLE.Frank.Pareto(t.event, event1, event2, Theta, Alpha1.0 = 1, Alpha2.0 = 1,
-  Gamma1.0 = 1, Gamma2.0 = 1, epsilon = 1e-05, d = exp(10), r.1 = 6,
-  r.2 = 6, r.3 = 6, r.4 = 6)
+MLE.Frank.Pareto(
+  t.event,
+  event1,
+  event2,
+  Theta,
+  Alpha1.0 = 1,
+  Alpha2.0 = 1,
+  Gamma1.0 = 1,
+  Gamma2.0 = 1,
+  epsilon = 1e-05,
+  d = exp(10),
+  r.1 = 6,
+  r.2 = 6,
+  r.3 = 6,
+  r.4 = 6
+)
 }
 \arguments{
 \item{t.event}{Vector of the observed failure times.}
